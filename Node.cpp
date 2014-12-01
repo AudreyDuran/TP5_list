@@ -66,27 +66,36 @@ Node::~Node(void)
 //                                 Public Methods
 // ===========================================================================
 
-void Node::Next(Node before)
+
+//add a Node to the list and change the attribute next of the precedent node
+/*void Node::Next(Node before)
 {
-	//before.next = &Node;
+	before.next = &Node;
 
-}
+}*/
 
-Node* Node::getNext(void)
+Node* Node::getNext(void) const
 {
 	return next;
 
 }
 
-Image* Node::getObj(void)
+Image* Node::getObj(void) const
 {
+	printf("L'image contenue dans le noeud a une largeur de %d.\n", (*obj).getWidth());
 	return obj;
 }
 
+//change the adress of the node which is next manually
+ void Node::setNext(Node n)
+ {
+ 	next= &n;
+ }
 
 // ===========================================================================
 //                                Protected Methods
 // ===========================================================================
+
 
 // ===========================================================================
 //                               Non inline accessors

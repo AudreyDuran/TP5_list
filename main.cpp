@@ -38,9 +38,25 @@
 // ===========================================================================
 int main(int argc, char* argv[])
 {
-	//Node test = Node(2);
 
-  	printf("Hello World !\n");
+	Image imGarg;
+	imGarg.ppm_read_from_file("gargouille.ppm");
+	Node ngarg = Node(imGarg);
+
+	Image imMatt;
+	imMatt.ppm_read_from_file("matt.ppm");
+	Node nmatt = Node(imMatt);
+	//imMatt.ppm_desaturate();
+	//imMatt.ppm_write_to_file("matt_BW.ppm");
+
+	ngarg.getObj();
+	nmatt.getObj();
+
+	printf("adresse du noeud matt %p\n", (&nmatt));
+	//ngarg.setNext(nmatt);
+
+  	Link_list swagList;
+  	//swagList.append(ngarg);
 
   	return 0;
 }

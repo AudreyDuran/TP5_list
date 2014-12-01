@@ -36,6 +36,8 @@
 // ===========================================================================
 Link_list::Link_list(void)
 {
+	nbNodes = 0;
+	head = NULL;
 }
 
 // ===========================================================================
@@ -49,6 +51,41 @@ Link_list::~Link_list(void)
 //                                 Public Methods
 // ===========================================================================
 
+//add a Node to the list
+void Link_list::append(const Node n)
+{
+	switch(nbNodes)
+	{
+		case 0:
+		//head=&n;
+		nbNodes=1;
+
+		break;
+
+		case !0:
+
+		//pointer on the last Node of the list
+		Node* end = head;
+
+		for(int i=1; i<nbNodes; i++)
+		{
+			end = end->getNext();
+		}
+
+		end->setNext(n);
+
+		nbNodes +=1;
+		break;
+	}
+
+}
+
+
+//remove a Node from the list
+void Link_list::remove(Node n)
+{
+
+}
 // ===========================================================================
 //                                Protected Methods
 // ===========================================================================
