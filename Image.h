@@ -1,4 +1,7 @@
 
+#ifndef __IMAGE_H__
+#define __IMAGE_H__
+
 class Image
 {
 
@@ -44,3 +47,5 @@ private:
 	u_char* data;  //pointer on the values R,G and B of the differents pixel
 
 };
+
+#endif // __IMAGE_H__

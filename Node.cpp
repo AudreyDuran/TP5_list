@@ -49,6 +49,12 @@ Node::Node(Image i)
 
 }
 
+Node::Node(const Node& model)
+{
+	printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
+    exit(EXIT_FAILURE);
+}
+
 // ===========================================================================
 //                                  Destructor
 // ===========================================================================
@@ -60,9 +66,9 @@ Node::~Node(void)
 //                                 Public Methods
 // ===========================================================================
 
-void Node::Next(Node actual, Node before)
+void Node::Next(Node before)
 {
-	before.next = &actual;
+	//before.next = &Node;
 
 }
 
