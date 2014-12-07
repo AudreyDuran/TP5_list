@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 	//ngarg.setNext(nmatt);
 
   	Link_list swagList;
-  	//swagList.append(ngarg);
+  	swagList.append(ngarg);
 
   	return 0;
 }

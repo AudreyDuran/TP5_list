@@ -49,6 +49,7 @@ Node::Node(Image i)
 
 }
 
+//mais pq serait interdit qd je veux juste modifier l'adresse du next ? 
 Node::Node(const Node& model)
 {
 	printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
